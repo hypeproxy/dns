@@ -10,7 +10,7 @@ masterFile.AddIPAddressResourceRecord("github.com", "127.0.0.1");
 // Log every request
 server.Requested += (sender, e) =>
 {
-	Console.Write($"{e.Remote.Address}:{e.Remote.Port}{e.Remote.AddressFamily.ToString()}");
+	Console.WriteLine($"{e.Remote.Address}:{e.Remote.Port}{e.Remote.AddressFamily.ToString()}");
 	Console.WriteLine(e.Request);
 };
 server.Responded += (sender, e) =>
