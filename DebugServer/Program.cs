@@ -11,11 +11,11 @@ masterFile.AddIPAddressResourceRecord("github.com", "127.0.0.1");
 server.Requested += (sender, e) =>
 {
 	Console.WriteLine($"{e.Remote.Address}:{e.Remote.Port}{e.Remote.AddressFamily.ToString()}");
-	Console.WriteLine(e.Request);
+	// Console.WriteLine(e.Request);
 };
 server.Responded += (sender, e) =>
 {
-	Console.WriteLine("{0} => {1}", e.Request, e.Response);
+	// Console.WriteLine("{0} => {1}", e.Request, e.Response);
 };
 server.Errored += (sender, e) => Console.WriteLine(e.Exception.Message);
 server.Listening += (sender, eventArgs) =>
